@@ -1,17 +1,22 @@
 <ion-header [translucent]="true">
   <ion-toolbar>
     <ion-title>
-      Tab 1
+      Translator
     </ion-title>
   </ion-toolbar>
 </ion-header>
 
-<ion-content [fullscreen]="true">
-  <ion-header collapse="condense">
-    <ion-toolbar>
-      <ion-title size="large">Tab 1</ion-title>
-    </ion-toolbar>
-  </ion-header>
-
-  <app-explore-container name="Tab 1 page"></app-explore-container>
-</ion-content>
+<ion-content>
+  <ion-card class="welcome-card">
+    <ion-card-content>
+      <!-- Input with placeholder -->
+      <ion-input [(ngModel)]="myinput" placeholder="Text for translation ... "></ion-input>
+      <ion-button (click)="btnTranslateClicked()" expand="block">Translate</ion-button>
+    </ion-card-content>
+  </ion-card>
+  <ion-card class="welcome-card">
+    <ion-card-content>
+      {{ myinput }} <ion-icon name="arrow-forward-outline"></ion-icon> {{ myoutput }} 
+    </ion-card-content>
+    </ion-card>
+  </ion-content>
